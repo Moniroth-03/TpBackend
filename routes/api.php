@@ -19,29 +19,8 @@ use App\Http\Controllers\Api\ProductController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-// Route::get('users', [Api\UsersController::class, 'index']);
-// Route::post('users', [Api\UsersController::class, 'store']);
-// Route::get('users/{user}', [Api\UsersController::class, 'show']);
-// Route::put('users/{user}', [Api\UsersController::class, 'update']);
-// Route::delete('users/{user}', [Api\UsersController::class, 'destroy']);
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::apiResource('tasks',TasksController::class)->except([
-    'create', 'show', 'edit', 
-]);
 
 Route::apiResource('categories',CategoryController::class)->except([
-    'create', 'show', 'edit',
-]);
-
-Route::apiResource('users',UserController::class)->except([
     'create', 'show', 'edit',
 ]);
 
