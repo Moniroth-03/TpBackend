@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\TasksController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\ProductController;
 
 
 /*
@@ -39,7 +40,12 @@ Route::apiResource('tasks',TasksController::class)->except([
 Route::apiResource('categories',CategoryController::class)->except([
     'create', 'show', 'edit',
 ]);
+
 Route::apiResource('users',UserController::class)->except([
+    'create', 'show', 'edit',
+]);
+
+Route::apiResource('products',ProductController::class)->except([
     'create', 'show', 'edit',
 ]);
 
