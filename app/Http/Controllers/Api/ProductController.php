@@ -66,7 +66,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Products $products)
+    public function update(Request $request, Products $product)
     {
         $product->update($request->all());
         return new ProductResource($product);
@@ -75,9 +75,9 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Products $products)
+    public function destroy(Products $product)
     {
         $product->delete();
-        return response(null,204);
+        return response("yayy deleted",204);
     }
 }

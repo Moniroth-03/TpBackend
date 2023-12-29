@@ -69,6 +69,6 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return response(null,204);
+        return response("yayy deleted",204);
     }
 }
