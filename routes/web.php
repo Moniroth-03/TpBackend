@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::middleware('auth:api')->get('/user', function () {
+    return 'Hello TP7';
+});
 Route::get('/', function () {
     return view('welcome');
 });

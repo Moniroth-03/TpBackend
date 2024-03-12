@@ -14,7 +14,6 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
-        Passport::routes();
     }
 
     /**
@@ -22,6 +21,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Passport::routes();
     }
 }
