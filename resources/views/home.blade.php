@@ -8,11 +8,10 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    
+
 
     <main>
-
-
+<h1>HIIIIIII</h1>
     </main>
 </body>
 </html>

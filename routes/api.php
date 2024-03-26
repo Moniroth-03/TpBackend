@@ -18,3 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::put('/users/{id}', 'ProfileController@update');
+Route::delete('/users/{id}', 'ProfileController@destroy');
+
